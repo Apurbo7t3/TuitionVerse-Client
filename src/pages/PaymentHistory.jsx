@@ -22,7 +22,9 @@ const PaymentHistory = () => {
     );
 
     // Filter only approved applications
-    const approvedTuitions = student.applications.list.filter(app => app.is_approved === true);
+    const approvedTuitions = student.enrolled_classrooms;
+    console.log(approvedTuitions);
+
 
     const formatCurrency = (amount) => {
         return `৳${amount.toLocaleString()}`;
@@ -86,7 +88,7 @@ const PaymentHistory = () => {
             </div>
 
             {/* Approved Tuitions List */}
-            {student.applications.total === 0 ? (
+            {student.enrolled_classrooms.length === 0 ? (
                 <div className="text-center py-12 bg-white rounded-2xl shadow">
                     <div className="text-6xl mb-4">📚</div>
                     <h3 className="text-xl font-semibold text-gray-700">No approved tuitions yet</h3>
@@ -94,7 +96,7 @@ const PaymentHistory = () => {
                 </div>
             ) : (
                 <div className="grid gap-4">
-                    {student.applications.list.map((app) => {
+                    {student.enrolled_classrooms.map((app) => {
                         const isPaid = paidTuitionIds.has(app.tuition.id);
 
                         return (
