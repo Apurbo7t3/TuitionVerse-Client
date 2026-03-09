@@ -34,7 +34,7 @@ const AppRoutes = () => {
                 <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />} />
                 <Route path="/resend-activation" element={<ResendActivation />} />
                 <Route path="/activate/:uid/:token" element={<ActivateAccount />} />
-                <Route path='tuitions' element={<Tuition />} />
+                <Route path='/tuitions' element={<Tuition />} />
                 <Route path="/tuitions/:id" element={<TuitionDetailsPage />} />
                 <Route path="/payment-success" element={<PaymentSuccess />} />
                 <Route path="/payment-failed" element={<PaymentFailed />} />
