@@ -1,6 +1,6 @@
 import axios from "axios";
 
 const userApiClient = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://tuition-verse.vercel.app",
 });
 export default userApiClient;
