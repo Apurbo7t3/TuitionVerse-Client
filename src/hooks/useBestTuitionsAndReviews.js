@@ -17,6 +17,7 @@ const useBestTuitionsAndReviews = () => {
         const tuitions = response.data.results || [];
         setBestTuitions(tuitions);
         const highRated = [];
+        console.log(tuitions);
         tuitions.forEach((tuition) => {
           tuition.reviews?.forEach((review) => {
             if (review.rating >= 4) {

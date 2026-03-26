@@ -35,20 +35,11 @@ const TuitionPage = () => {
     ];
 
     // Handle price range changes
-    const handlePriceRangeChange = (index, value) => {
-        const newRange = [...priceRange];
-        newRange[index] = value;
-
-        if (index === 0 && value > priceRange[1]) {
-            newRange[1] = value;
-        }
-        if (index === 1 && value < priceRange[0]) {
-            newRange[0] = value;
-        }
-
+    const handlePriceRangeChange = (newRange) => {
         setPriceRange(newRange);
         setCurrentPage(1);
     };
+
 
     // Handle subject change
     const handleSubjectChange = (subject) => {
@@ -80,17 +71,19 @@ const TuitionPage = () => {
     return (
         <div className="bg-purple-50 mb-5 py-5">
             {/* Filter Section */}
-            <FilterSection
-                priceRange={priceRange}
-                handlePriceRangeChange={handlePriceRangeChange}
-                subjects={subjects}
-                selectedSubject={selectedSubject}
-                handleSubjectChange={handleSubjectChange}
-                searchQuery={searchQuery}
-                handleSearchQuery={handleSearchQuery}
-                sortOrder={sortOrder}
-                handleSortOrder={handleSortOrder}
-            />
+            <div className="max-w-11/12 mx-auto px-4 mb-4">
+                <FilterSection
+                    priceRange={priceRange}
+                    handlePriceRangeChange={handlePriceRangeChange}
+                    subjects={subjects}
+                    selectedSubject={selectedSubject}
+                    handleSubjectChange={handleSubjectChange}
+                    searchQuery={searchQuery}
+                    handleSearchQuery={handleSearchQuery}
+                    sortOrder={sortOrder}
+                    handleSortOrder={handleSortOrder}
+                />
+            </div>
 
             {/* Results Info */}
             <div className="max-w-11/12 mx-auto px-4 mb-4">
