@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Filter, X, SlidersHorizontal } from 'lucide-react';
+import { X, SlidersHorizontal } from 'lucide-react';
 import PriceRangeFilter from "./filters/PriceRangeFilter";
 import SearchFilter from "./filters/SearchFilter";
 import SortByPriceFilter from "./filters/SortByPriceFilter";
@@ -18,7 +18,7 @@ const FilterSection = ({
 }) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    // Count active filters (optional, for badge)
+    // Count active filters
     const activeFiltersCount = [
         priceRange[0] > 0 || priceRange[1] < 10000,
         selectedSubject !== '',
@@ -31,7 +31,7 @@ const FilterSection = ({
     return (
         <div className="sticky top-0 z-20 rounded-2xl bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-200">
             <div className="max-w-7xl mx-auto px-4 py-3">
-                {/* Filter bar header (always visible) */}
+                {/* Filter bar header */}
                 <div className="flex items-center justify-between">
                     <button
                         onClick={toggleFilters}
@@ -62,7 +62,7 @@ const FilterSection = ({
                                 handleSearchQuery('');
                                 handleSortOrder('');
                             }}
-                            className="text-xs text-purple-600 hover:text-purple-800 transition-colors"
+                            className="text-md text-purple-600 hover:text-purple-800 transition-colors"
                         >
                             Clear all
                         </button>

@@ -27,12 +27,12 @@ const PriceRangeFilter = ({ priceRange, onPriceRangeChange }) => {
         <div>
             <label className="text-xs font-medium text-gray-500 block mb-1">Price Range</label>
             <div className='relative h-8 w-full mb-2'>
-                <div className='absolute top-1/2 -translate-y-1/2 w-full h-1 bg-gray-200 rounded-full'></div>
-                <div className='absolute top-1/2 -translate-y-1/2 h-1 bg-purple-600 rounded-full'
+                <div className='absolute top-1/2 -translate-y-1/2 w-full h-2 bg-gray-200 rounded-full'></div>
+                <div className='absolute top-1/2 -translate-y-1/2 h-2 bg-purple-600 rounded-full'
                     style={{ left: `${getMinPercent()}%`, right: `${100 - getMaxPercent()}%` }}></div>
                 <input type="range" min={0} max={10000} step={10} value={localMin} onChange={handleMinChange}
-                    className='absolute top-1/2 -translate-y-1/2 w-full appearance-none bg-transparent
-                        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 
+                    className='absolute top-1/2 -translate-y-2 w-full appearance-none bg-transparent
+                        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 
                         [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 
                         [&::-webkit-slider-thumb]:border-purple-600 [&::-webkit-slider-thumb]:shadow-sm
                         [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:transition-transform
@@ -40,8 +40,8 @@ const PriceRangeFilter = ({ priceRange, onPriceRangeChange }) => {
                         [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-purple-600
                         [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-transparent' />
                 <input type="range" min={0} max={10000} step={10} value={localMax} onChange={handleMaxChange}
-                    className='absolute top-1/2 -translate-y-1/2 w-full appearance-none bg-transparent
-                        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 
+                    className='absolute top-1/2 -translate-y-2 w-full appearance-none bg-transparent
+                        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 
                         [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 
                         [&::-webkit-slider-thumb]:border-purple-600 [&::-webkit-slider-thumb]:shadow-sm
                         [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:transition-transform
