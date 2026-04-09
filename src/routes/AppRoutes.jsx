@@ -35,7 +35,7 @@ const AppRoutes = () => {
                 <Route path="/resend-activation" element={<ResendActivation />} />
                 <Route path="/activate/:uid/:token" element={<ActivateAccount />} />
                 <Route path='/tuitions' element={<Tuition />} />
-                <Route path="/tuitions/:id" element={<TuitionDetailsPage />} />
+                <Route path="/tuitions/:id" element={<PrivateRoute><TuitionDetailsPage /></PrivateRoute>} />
                 <Route path="/payment-success" element={<PaymentSuccess />} />
                 <Route path="/payment-failed" element={<PaymentFailed />} />
                 <Route path="/payment-cancelled" element={<PaymentCancelled />} />

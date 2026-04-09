@@ -8,6 +8,7 @@ import NewsLatter from "../components/home/NewsLatter";
 import Loading from "../components/Loading";
 import ErrorAlert from "../components/ErrorAlert";
 import useBestTuitionsAndReviews from "../hooks/useBestTuitionsAndReviews";
+import ChatBot from "../components/ChatBot";
 
 const Home = () => {
 
@@ -29,6 +30,7 @@ const Home = () => {
             }
             <Questions />
             <NewsLatter />
+            <ChatBot />
         </main>
     );
 };
