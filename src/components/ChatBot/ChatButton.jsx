@@ -4,13 +4,6 @@ import robot1 from '../../assets/robot_1.png'
 import ask from '../../assets/ask.png'
 const ChatButton = ({ isOpen, onClick }) => {
     return (
-        // <button
-        //     onClick={onClick}
-        //     className="fixed bottom-6 right-6 z-50 btn btn-primary rounded-full shadow-lg p-4 text-white hover:scale-105 transition-transform"
-        //     aria-label="Open chat"
-        // >
-        //     {isOpen ? <FaTimes size={24} /> : <FaRobot size={24} />}
-        // </button>
         <button
             onClick={onClick}
             className="fixed bottom-6 right-6 z-50 group transition-all duration-300 hover:scale-110 active:scale-95 outline-none ">
